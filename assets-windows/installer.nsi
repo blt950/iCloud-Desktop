@@ -1,6 +1,6 @@
 !include "MUI2.nsh"
 
-Name "Messenger"
+Name "iCloud"
 BrandingText "blt950.com"
 
 # set the icon
