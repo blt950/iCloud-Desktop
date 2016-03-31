@@ -32,7 +32,7 @@ Section
   SetOutPath $INSTDIR
 
   # specify the files to go in the output path
-  File /r ..\build\iCloudApp\win32\*
+  File /r ..\build\iCloud\win32\*
 
   # create the uninstaller
   WriteUninstaller "$INSTDIR\Uninstall iCloud for Desktop.exe"
