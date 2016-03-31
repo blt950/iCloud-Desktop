@@ -58,7 +58,7 @@ module.exports = {
         settings.launchOnStartup = this.checked;
 
         var launcher = new AutoLaunch({
-          name: 'Messenger',
+          name: 'iCloud',
           isHidden: true // hidden on launch - only works on a mac atm
         });
 
@@ -79,40 +79,6 @@ module.exports = {
             });
           }
         });
-      }
-    }, {
-      type: 'checkbox',
-      label: 'Check for Update on Launch',
-      setting: 'checkUpdateOnLaunch'
-    }, {
-      type: 'separator'
-    }, {
-      type: 'checkbox',
-      label: 'Auto-Hide Sidebar',
-      setting: 'autoHideSidebar'
-    }, {
-      label: 'Theme',
-      submenu: this.createThemesMenu(keep)
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Check for Update',
-      click: function() {
-        updater.check(gui.App.manifest, function(error, newVersionExists, newManifest) {
-          if (error || newVersionExists) {
-            updater.prompt(win, false, error, newVersionExists, newManifest);
-          } else {
-            dispatcher.trigger('win.alert', {
-              win: win,
-              message: 'You’re using the latest version: ' + gui.App.manifest.version
-            });
-          }
-        });
-      }
-    }, {
-      label: 'Launch Dev Tools',
-      click: function() {
-        win.showDevTools();
       }
     }].map(function(item) {
       // If the item has a 'setting' property, use some predefined values
@@ -195,7 +161,7 @@ module.exports = {
       type: 'menubar'
     });
 
-    menu.createMacBuiltin('Messenger');
+    menu.createMacBuiltin('iCloud');
     var submenu = menu.items[0].submenu;
 
     submenu.insert(new gui.MenuItem({
@@ -235,14 +201,14 @@ module.exports = {
     }));
 
     menu.append(new gui.MenuItem({
-      label: 'Show Messenger',
+      label: 'Show iCloud',
       click: function() {
         win.show();
       }
     }));
 
     menu.append(new gui.MenuItem({
-      label: 'Quit Messenger',
+      label: 'Quit iCloud',
       click: function() {
         win.close(true);
       }
@@ -277,7 +243,7 @@ module.exports = {
       win.show();
     });
 
-    tray.tooltip = 'Messenger for Desktop';
+    tray.tooltip = 'iCloud for Desktop';
     tray.menu = this.createTrayMenu(win);
 
     // keep the object in memory
