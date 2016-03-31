@@ -17,7 +17,7 @@ InstallDir "$PROGRAMFILES\iCloud for Desktop\"
 !insertmacro MUI_PAGE_INSTFILES
 
 !define MUI_FINISHPAGE_RUN_TEXT "Start iCloud"
-!define MUI_FINISHPAGE_RUN $INSTDIR\iCloudApp.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\iCloud.exe
 
 !insertmacro MUI_PAGE_FINISH
 !insertmacro MUI_LANGUAGE "English"
