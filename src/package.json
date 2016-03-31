@@ -5,6 +5,8 @@
   "app-id": "com.blt950.icloudfordesktop",
   "chromium-args": "--disable-setuid-sandbox",
   "window": {
+    "width": 1400,
+    "height": 1000,
     "title": "iCloud",
     "icon": "images/icon.png",
     "toolbar": false,
