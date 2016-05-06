@@ -7,7 +7,7 @@ BrandingText "blt950.com"
 !define MUI_ICON "icon.ico"
 
 # define the resulting installer's name:
-OutFile "..\dist\iCloudAppSetup.exe"
+OutFile "..\dist\iCloud Desktop Setup.exe"
 
 # set the installation directory
 InstallDir "$PROGRAMFILES\iCloud for Desktop\"
