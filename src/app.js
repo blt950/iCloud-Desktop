@@ -2,12 +2,9 @@ var gui = require('nw.gui');
 var win = gui.Window.get();
 
 var platform = require('./components/platform');
-var updater = require('./components/updater');
 var menus = require('./components/menus');
-var themer = require('./components/themer');
 var settings = require('./components/settings');
 var windowBehaviour = require('./components/window-behaviour');
-var notification = require('./components/notification');
 var dispatcher = require('./components/dispatcher');
 
 // Ensure there's an app shortcut for toast notifications to work on Windows
@@ -28,11 +25,6 @@ dispatcher.addEventListener('win.confirm', function(data) {
 windowBehaviour.restoreWindowState(win);
 windowBehaviour.bindWindowStateEvents(win);
 
-// Check for update
-if (settings.checkUpdateOnLaunch) {
-  updater.checkAndPrompt(gui.App.manifest, win);
-}
-
 // Run as menu bar app
 if (settings.asMenuBarAppOSX) {
   win.setShowInTaskbar(false);
@@ -52,11 +44,6 @@ windowBehaviour.setNewWinPolicy(win);
 // Inject logic into the app when it's loaded
 var iframe = document.querySelector('iframe');
 iframe.onload = function() {
-  // Load the theming module
-  themer.apply(iframe.contentDocument);
-
-  // Inject a callback in the notification API
-  notification.inject(iframe.contentWindow, win);
 
   // Add a context menu
   menus.injectContextMenu(win, iframe.contentWindow, iframe.contentDocument);

@@ -5,7 +5,6 @@ var windowBehaviour = require('./window-behaviour');
 var dispatcher = require('./dispatcher');
 var platform = require('./platform');
 var settings = require('./settings');
-var updater = require('./updater');
 var utils = require('./utils');
 
 module.exports = {
@@ -103,50 +102,6 @@ module.exports = {
       menuItem.setting = item.setting;
       return menuItem;
     });
-  },
-
-  /**
-   * Create the themes submenu shown in the main one.
-   *
-   * @param keep If true, then the menu will only be created once and it
-   *             should listen for changes in the settings to update itself.
-   */
-  createThemesMenu: function(keep) {
-    var menu = new gui.Menu();
-    var THEMES = {
-      'default': 'Default',
-      'mosaic': 'Mosaic',
-      'dark': 'Dark'
-    };
-
-    Object.keys(THEMES).forEach(function(key) {
-      menu.append(new gui.MenuItem({
-        type: 'checkbox',
-        label: THEMES[key],
-        checked: settings.theme == key,
-        click: function() {
-          if (keep) {
-            menu.items.forEach(function(item) {
-              item.checked = false;
-            });
-
-            this.checked = true;
-          }
-
-          settings.theme = key;
-        }
-      }));
-    });
-
-    if (keep) {
-      settings.watch('theme', function(key) {
-        menu.items.forEach(function(item) {
-          item.checked = item.label == THEMES[key];
-        });
-      });
-    }
-
-    return menu;
   },
 
   /**
