@@ -2,6 +2,10 @@
 
 Bring [icloud.com](https://icloud.com) to your Windows desktop. Built with [NW.js](http://nwjs.io/). Not affiliated with Apple or iCloud. All copyright, trademarks and similar belong fully to Apple Inc.
 
+## Download
+
+[Click here to download latest release](https://github.com/blt950/iCloud-Desktop/releases/latest)
+
 ## Contributions
 
 Contributions are welcome! For feature requests and bug reports please [submit an issue](https://github.com/blt950/iCloudApp/issues).
