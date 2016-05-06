@@ -1,4 +1,4 @@
-# iCloud app for Windows desktop
+# iCloud Desktop application for Windows
 
 Bring [icloud.com](https://icloud.com) to your Windows desktop. Built with [NW.js](http://nwjs.io/). Not affiliated with Apple or iCloud. All copyright, trademarks and similar belong fully to Apple Inc.
 
@@ -10,7 +10,7 @@ Contributions are welcome! For feature requests and bug reports please [submit a
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Daniel Lange
+Copyright (c) 2016 Daniel Lange
 This is derived work based off Alexandru Rosianu's Facebook Messenger Desktop: https://github.com/Aluxian/Facebook-Messenger-Desktop
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
