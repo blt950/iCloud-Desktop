@@ -9,7 +9,7 @@ var dispatcher = require('./components/dispatcher');
 
 // Ensure there's an app shortcut for toast notifications to work on Windows
 if (platform.isWindows) {
-  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\Messenger.lnk");
+  gui.App.createShortcut(process.env.APPDATA + "\\Microsoft\\Windows\\Start Menu\\Programs\\iCloud.lnk");
 }
 
 // Add dispatcher events
