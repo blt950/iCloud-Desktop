@@ -13,8 +13,6 @@ Contributions are welcome! For feature requests and bug reports please [submit a
 ## License
 
 The MIT License (MIT)
-
-Copyright (c) 2016 Daniel Lange
 This is derived work based off Alexandru Rosianu's Facebook Messenger Desktop: https://github.com/Aluxian/Facebook-Messenger-Desktop
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
